@@ -10,8 +10,15 @@ def add_todo():
 st.title("My todo app")
 
 
-for todo in todos:
-    st.checkbox(todo)
+for index, todo in enumerate(todos):
+    checkbox = st.checkbox(todo, key=f"todo_{index}")
+    print(checkbox)
+    if checkbox:
+        print(checkbox)
+        mgt.delete_todo(index)
+        st.experimental_rerun()
 
 
 st.text_input(label="todo", placeholder="add a todo", key="new_todo", on_change=add_todo)
+
+st.session_state

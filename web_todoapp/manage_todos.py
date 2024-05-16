@@ -13,5 +13,15 @@ def create_todo(todo):
         for todo in todos:
             file.write(todo + "\n")
     print(todos)
-        
+
+
+def delete_todo(todo_index):
+    todos = get_todos()
+    del todos[todo_index]
+    with open("web_todoapp/todos.txt", "w") as file:
+        for todo in todos:
+            file.write(todo + "\n")
+    print(todos)
+
+delete_todo(1)
     
