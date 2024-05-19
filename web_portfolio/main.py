@@ -21,8 +21,11 @@ col3, col4 = st.columns(2)
 
 def projectLayout(col):
     with col:
-        st.header(project["title"])
-        st.write(project["description"])
+        st.header(project['title'])
+        st.write(project['description'])
+        st.image("static/" + project['image_url'], width=350)
+        st.write(f"[Source Code]({project['url']})")
+        
 
 for index, project in enumerate(projects):
     if (index + 1) % 2 == 0:
