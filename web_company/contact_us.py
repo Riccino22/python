@@ -1,5 +1,5 @@
 import streamlit as st
-
+import send_email as sem
 st.header("Contact Us")
 
 with st.form(key="email_forms"):
@@ -7,4 +7,5 @@ with st.form(key="email_forms"):
     message = st.text_area("Your message")
     btn_send = st.form_submit_button()
     if btn_send:
-        pass
+        sem.send(user_email, message)
+        
