@@ -8,5 +8,6 @@ with st.form(key="email_forms"):
     message = st.text_area("Your message")
     btn_send = st.form_submit_button()
     if btn_send:
+        print(user_email)
         sem.send(user_email, category, message)
         
