@@ -1,5 +1,16 @@
 import csv
 
+def get_tags():
+    with open('tags.csv', 'r') as f:
+        reader = csv.reader(f)
+        tags = []
+        for row in reader:
+            tags.append(row[0])
+    return tags
+
+print(get_tags())
+
+"""
 def add_seeker(name, email, phone):
     with open("job_seekers.csv", "a", newline='') as file:
         fieldnames = ["name","email","phone"]
@@ -15,5 +26,4 @@ def add_seeker(name, email, phone):
             "email": email,
             "phone": phone
         })
-        
-        
+"""

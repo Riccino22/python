@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Rick",
+        "email": "email",
+        "phone": "123456",
+        "tags": [
+            "Programming",
+            "Music",
+            "Education",
+            "tag",
+            "Art",
+            "Sport"
+        ],
+        "id": 1
+    },
+    {
+        "name": "Rick",
+        "email": "email",
+        "phone": "123456",
+        "tags": [
+            "Programming",
+            "Music",
+            "Education",
+            "tag",
+            "Art",
+            "Sport"
+        ],
+        "id": 2
+    }
+]
