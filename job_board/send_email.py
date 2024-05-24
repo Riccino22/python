@@ -7,9 +7,8 @@ load_dotenv()  # Load environment variables from .env file
 
 host = "smtp.gmail.com"  # SMTP server host
 port = 465  # Port for SMTP SSL connection
-email = "riccardoinojosa@gmail.com"  # Sender's email address
+email =  os.environ.get("EMAIL")  # Sender's email address
 password = os.environ.get("PASSWORD")  # Get password from environment variable
-print(password)  # Print password for debugging
 
 context = ssl.create_default_context()  # Create SSL context for secure connection
 
@@ -35,7 +34,6 @@ def get_seekers(tags):
                 added = True  # Update flag to indicate seeker has been added
     return seekers  # Return list of matching seekers
 
-print(get_seekers("Art"))  # Debugging: Print matching seekers for "Art" tag
 
 def send(tags, title, message):
     seekers = get_seekers(tags)  # Get matching seekers for provided tags
