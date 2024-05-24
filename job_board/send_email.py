@@ -14,9 +14,10 @@ print(password)
 context = ssl.create_default_context()
 
 default_content = f"""\
-Subject: New offer of --tags--
+Subject: NEW OFFER: --TITLE--
 
 --BODY--
+
 """
 
 def get_seekers(tags):
@@ -39,11 +40,11 @@ print(get_seekers("Art"))
     
         
 
-def send(tags, message):
+def send(tags, title, message):
     seekers = get_seekers(tags)
     
     email_content = default_content
-    email_content = email_content.replace("--tags--", tags[0])
+    email_content = email_content.replace("--TITLE--", title)
     email_content = email_content.replace("--BODY--", message)
 
     with smtplib.SMTP_SSL(host, port, context=context) as server:

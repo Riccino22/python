@@ -4,14 +4,17 @@ import manage_json as mjson
 import send_email
 st.title("Publish New Offer")
 with st.form(key="offer_form"):
-    title = st.text_input("Title", key="title")
+    title = st.text_input("Title")
+    email = st.text_input("Your email")
     tags = st.multiselect("Tags", mcsv.get_tags())
+    description = st.text_area("Description")
     btn = st.form_submit_button()
     
     if btn:
         mjson.add_to_json("offers.json", {
             "title": title,
-            "tags": tags
+            "tags": tags,
+            "description": description
         })        
-        send_email.send(tags, title)
+        send_email.send(tags, title, description)
         st.success("Offer published successfully")

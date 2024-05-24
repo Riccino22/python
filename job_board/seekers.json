@@ -2,22 +2,11 @@
     {
         "name": "Riccardo Inojosa",
         "email": "riccardoinojosa@gmail.com",
-        "phone": "12345",
+        "phone": "09838345",
         "tags": [
             "Programming",
             "Education"
         ],
         "id": 1
-    },
-    {
-        "name": "Roberto Perez",
-        "email": "riccardorinojosam@gmail.com",
-        "phone": "123456",
-        "tags": [
-            "Education",
-            "Music",
-            "Art"
-        ],
-        "id": 2
     }
 ]
