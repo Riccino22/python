@@ -21,7 +21,7 @@ Subject: NEW OFFER: --TITLE--
 
 def get_seekers(tags):
     try:
-        with open("seekers.json", "r") as file:  # Open JSON file containing seeker data
+        with open("job_board/seekers.json", "r") as file:  # Open JSON file containing seeker data
             data = json.load(file)  # Load JSON data into variable
     except json.decoder.JSONDecodeError:  # Handle JSON decoding error
         data = []  # If there's an error, initialize data as an empty list
