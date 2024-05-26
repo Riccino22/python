@@ -8,7 +8,8 @@ def get_words():
             words.append(row)
     return words
 
-def insert_word(word, description):
+def insert_word(word, translation, description):
     with open("data/words.csv", "a") as file:
         writer = csv.writer(file, delimiter=";")
-        writer.writerow([word, description])
+        print(translation)
+        writer.writerow([word, translation, description])
