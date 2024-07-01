@@ -1,48 +1,48 @@
-import smtplib, ssl  # Import libraries for sending emails securely
-import os  # Import the os module for interacting with the operating system
-from dotenv import load_dotenv  # Import function to load environment variables from a .env file
-import json  # Import the json module for working with JSON data
+import smtplib, ssl
+import os
+from dotenv import load_dotenv
+import json
 
-load_dotenv()  # Load environment variables from .env file
+load_dotenv()
 
-host = "smtp.gmail.com"  # SMTP server host
-port = 465  # Port for SMTP SSL connection
-email =  os.environ.get("EMAIL")  # Sender's email address
-password = os.environ.get("PASSWORD")  # Get password from environment variable
+host = "smtp.gmail.com"
+port = 465
+email =  os.environ.get("EMAIL")
+password = os.environ.get("PASSWORD")
 
-context = ssl.create_default_context()  # Create SSL context for secure connection
+context = ssl.create_default_context()
 
 default_content = f"""\
 Subject: NEW OFFER: --TITLE--
 
 --BODY--
 
-"""  # Default email content template
+"""
 
 def get_seekers(tags):
     try:
-        with open("job_board/seekers.json", "r") as file:  # Open JSON file containing seeker data
-            data = json.load(file)  # Load JSON data into variable
-    except json.decoder.JSONDecodeError:  # Handle JSON decoding error
-        data = []  # If there's an error, initialize data as an empty list
-    seekers = []  # Initialize list to store matching seekers
-    for seeker in data:  # Iterate through each seeker in the data
-        added = False  # Initialize flag to track if seeker has already been added
-        for tag in tags:  # Iterate through each tag in the provided tags
-            if tag in seeker["tags"] and added == False:  # Check if seeker's tags match any of the provided tags
-                seekers.append(seeker)  # Add seeker to the list of matching seekers
-                added = True  # Update flag to indicate seeker has been added
-    return seekers  # Return list of matching seekers
+        with open("job_board/seekers.json", "r") as file:
+            data = json.load(file)
+    except json.decoder.JSONDecodeError:
+        data = []
+    seekers = []
+    for seeker in data:
+        added = False
+        for tag in tags:
+            if tag in seeker["tags"] and added == False:
+                seekers.append(seeker)
+                added = True
+    return seekers
 
 
 def send(tags, title, message):
-    seekers = get_seekers(tags)  # Get matching seekers for provided tags
+    seekers = get_seekers(tags)
     
-    email_content = default_content  # Initialize email content with default template
-    email_content = email_content.replace("--TITLE--", title)  # Replace placeholder with offer title
-    email_content = email_content.replace("--BODY--", message)  # Replace placeholder with offer message
+    email_content = default_content
+    email_content = email_content.replace("--TITLE--", title)
+    email_content = email_content.replace("--BODY--", message)
 
-    with smtplib.SMTP_SSL(host, port, context=context) as server:  # Connect to SMTP server
-        server.login(email, password)  # Login to sender's email account
-        for seeker in seekers:  # Iterate through each matching seeker
-            server.sendmail(email, seeker["email"], email_content)  # Send email to seeker
+    with smtplib.SMTP_SSL(host, port, context=context) as server:
+        server.login(email, password)
+        for seeker in seekers:
+            server.sendmail(email, seeker["email"], email_content)
