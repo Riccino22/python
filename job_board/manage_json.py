@@ -1,24 +1,24 @@
-import json  # Import the JSON module for working with JSON data  
+import json
 
-def add_to_json(filename, data):  # Define a function to add data to a JSON file  
-    try:  
-        with open("job_board/" + filename, "r") as file:  # Open the JSON file in read mode  
-            info = json.load(file)  # Load the JSON data into a variable  
-    except json.decoder.JSONDecodeError:  # Handle JSON decoding error  
-        info = []  # If there's an error, initialize info as an empty list  
+def add_to_json(filename, data):
+    try:
+        with open("job_board/" + filename, "r") as file:
+            info = json.load(file)
+    except json.decoder.JSONDecodeError:
+        info = []
     
-    info.append(data)  # Append the new data to the list  
+    info.append(data)
     
-    for index, item in enumerate(info):  # Iterate through each item in the list  
-        item["id"] = index + 1  # Add an "id" field to each item, starting from 1  
+    for index, item in enumerate(info):
+        item["id"] = index + 1
     
-    with open("job_board/" + filename, "w") as file:  # Open the JSON file in write mode  
-        json.dump(info, file, indent=4)  # Write the updated JSON data to the file with indentation  
+    with open("job_board/" + filename, "w") as file:
+        json.dump(info, file, indent=4)
 
-def get_json(filename):  # Define a function to retrieve data from a JSON file  
-    try:  
-        with open(filename, "r") as file:  # Open the JSON file in read mode  
-            info = json.load(file)  # Load the JSON data into a variable  
-    except json.decoder.JSONDecodeError:  # Handle JSON decoding error  
-        info = []  # If there's an error, initialize info as an empty list  
-    return info  # Return the retrieved JSON data  
+def get_json(filename):
+    try:
+        with open(filename, "r") as file:
+            info = json.load(file)
+    except json.decoder.JSONDecodeError:
+        info = []
+    return info
