@@ -3,6 +3,7 @@ from nltk.corpus import wordnet
 from nltk.corpus import words
 from deep_translator import GoogleTranslator
 
+
 nltk.download('words')
 
 nltk.download('wordnet')
