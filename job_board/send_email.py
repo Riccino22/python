@@ -10,6 +10,9 @@ port = 465
 email =  os.environ.get("EMAIL")
 password = os.environ.get("PASSWORD")
 
+print("|"*4)
+print(email)
+
 context = ssl.create_default_context()
 
 default_content = f"""\
@@ -21,7 +24,7 @@ Subject: NEW OFFER: --TITLE--
 
 def get_seekers(tags):
     try:
-        with open("job_board/seekers.json", "r") as file:
+        with open("seekers.json", "r") as file:
             data = json.load(file)
     except json.decoder.JSONDecodeError:
         data = []

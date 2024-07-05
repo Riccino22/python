@@ -1,0 +1,180 @@
+[
+    {
+        "title": "Node Developer",
+        "tags": [
+            "Information Technology (IT)"
+        ],
+        "description": "We need a NodeJS developer with experience with MongoDB",
+        "id": 1
+    },
+    {
+        "title": "Registered Nurse",
+        "tags": [
+            "Healthcare"
+        ],
+        "description": "Seeking a registered nurse with experience in emergency care",
+        "id": 2
+    },
+    {
+        "title": "Financial Analyst",
+        "tags": [
+            "Finance"
+        ],
+        "description": "Looking for a financial analyst with strong analytical and Excel skills",
+        "id": 3
+    },
+    {
+        "title": "Civil Engineer",
+        "tags": [
+            "Engineering"
+        ],
+        "description": "Hiring a civil engineer with experience in infrastructure projects",
+        "id": 4
+    },
+    {
+        "title": "High School Teacher",
+        "tags": [
+            "Education"
+        ],
+        "description": "Looking for a high school teacher specializing in mathematics",
+        "id": 5
+    },
+    {
+        "title": "Marketing Manager",
+        "tags": [
+            "Marketing"
+        ],
+        "description": "Seeking a marketing manager with a strong background in digital marketing",
+        "id": 6
+    },
+    {
+        "title": "Sales Representative",
+        "tags": [
+            "Sales",
+            "Marketing"
+        ],
+        "description": "We need a sales representative with excellent communication skills",
+        "id": 7
+    },
+    {
+        "title": "HR Specialist",
+        "tags": [
+            "Human Resources (HR)"
+        ],
+        "description": "Hiring an HR specialist to manage recruitment and employee relations",
+        "id": 8
+    },
+    {
+        "title": "Customer Service Representative",
+        "tags": [
+            "Customer Service"
+        ],
+        "description": "Looking for a customer service representative to handle client inquiries",
+        "id": 9
+    },
+    {
+        "title": "Office Administrator",
+        "tags": [
+            "Administration"
+        ],
+        "description": "Seeking an office administrator to oversee daily office operations",
+        "id": 10
+    },
+    {
+        "title": "Paralegal",
+        "tags": [
+            "Legal",
+            "Administration"
+        ],
+        "description": "Hiring a paralegal with experience in corporate law",
+        "id": 11
+    },
+    {
+        "title": "Operations Manager",
+        "tags": [
+            "Operations",
+            "Management"
+        ],
+        "description": "Looking for an operations manager to improve operational efficiency",
+        "id": 12
+    },
+    {
+        "title": "Research Scientist",
+        "tags": [
+            "Research and Development (R&D)",
+            "Healthcare"
+        ],
+        "description": "Seeking a research scientist with a background in biotechnology",
+        "id": 13
+    },
+    {
+        "title": "Production Supervisor",
+        "tags": [
+            "Manufacturing"
+        ],
+        "description": "Hiring a production supervisor with experience in assembly line management",
+        "id": 14
+    },
+    {
+        "title": "Retail Manager",
+        "tags": [
+            "Retail",
+            "Sales"
+        ],
+        "description": "Looking for a retail manager to oversee store operations",
+        "id": 15
+    },
+    {
+        "title": "Hotel Manager",
+        "tags": [
+            "Hospitality",
+            "Management"
+        ],
+        "description": "Seeking a hotel manager with experience in luxury hotel management",
+        "id": 16
+    },
+    {
+        "title": "Construction Project Manager",
+        "tags": [
+            "Construction",
+            "Engineering"
+        ],
+        "description": "Hiring a construction project manager with a background in commercial projects",
+        "id": 17
+    },
+    {
+        "title": "Graphic Designer",
+        "tags": [
+            "Design",
+            "Media and Communications"
+        ],
+        "description": "Looking for a creative graphic designer with experience in Adobe Suite",
+        "id": 18
+    },
+    {
+        "title": "Logistics Coordinator",
+        "tags": [
+            "Logistics and Supply Chain"
+        ],
+        "description": "Seeking a logistics coordinator to manage shipping and inventory",
+        "id": 19
+    },
+    {
+        "title": "Software Engineer",
+        "tags": [
+            "Information Technology (IT)",
+            "Engineering"
+        ],
+        "description": "Hiring a software engineer with experience in full-stack development",
+        "id": 20
+    },
+    {
+        "title": "Social Media Manager",
+        "tags": [
+            "Marketing",
+            "Media and Communications"
+        ],
+        "description": "We are looking for a social media manager with experience in content creation and audience engagement",
+        "id": 21
+    }
+]
