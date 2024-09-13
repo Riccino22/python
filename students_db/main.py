@@ -33,7 +33,7 @@ class MainWindow(QMainWindow):
             
         
 app = QApplication(sys.argv)
-app_calculator = MainWindow()
-app_calculator.show()
-app_calculator.load_data()
+main_window = MainWindow()
+main_window.show()
+main_window.load_data()
 sys.exit(app.exec())
